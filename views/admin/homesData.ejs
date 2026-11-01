@@ -2,11 +2,9 @@
 
   <body>
     <%- include("../partials/Header") %>
-      <!-- Put the new user header in place of this host systems header -->
 
       <div class="space">
         <h1 class="homes">Available Homes 🏡</h1>
-        <!-- <p>You are in the result page.</p> -->
         <div class="cardLayoutContainer">
           <% if (items.length===0) { %>
             <p>No homes added yet.</p>
@@ -15,24 +13,21 @@
                 <form method="post">
                   <div class="homesCardContainer">
                     <div class="topContainer">
-                      <!-- <img class="homeImage" src=" https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400 "
-                        alt="Home image" class="homeImage"> -->
-                        <img class="homeImage" src="<%= item.imageLink %>" alt="Home image">
+                      <img class="homeImage" src="<%= item.image_link %>" alt="Home image">
                     </div>
-
                     <div class="bottomContainer">
                       <div class="topItem">
                         <div class="providerName">
-                          <%= item.Name %>
+                          <%= item.name %>
                         </div>
-                        <div class="rating">⭐<%= item.Rating%>
+                        <div class="rating">⭐<%= item.rating%>
                         </div>
                       </div>
                       <div class="homeLocation">
-                        <%= item.Location %>
+                        <%= item.location %>
                       </div>
                       <div class="priceContainer">
-                        <div class="realPrice">Rs<%=item.Price%>
+                        <div class="realPrice">Rs<%=item.price%>
                         </div>
                         <div class="priceBar">/</div>
                         <div class="night">night</div>
@@ -40,9 +35,9 @@
                       <div class="buttonContainer">
 
                         <div class="form1">
-                          <button type="button" class="editButton" data-id="<%=item.id%>">Edit</button>
+                          <button type="button" class="editButton" data-id="<%=item.home_id%>">Edit</button>
                         </div>
-                        <button type="button" class="deleteButton" data-id="<%=item.id%>">Delete</button>
+                        <button type="button" class="deleteButton" data-id="<%=item.home_id%>">Delete</button>
                       </div>
                     </div>
                   </div>
@@ -50,15 +45,10 @@
                 <% }) %>
                   <% } %>
         </div>
-
-
-
-
-          <div class="editHomePage">
-            <label for="A19258">Edit home page :</label>
-            <input type="text" id="A19258" name="Edit home">
-
-          </div>
+        <div class="editHomePage">
+          <label for="A19258">Edit home page :</label>
+          <input type="text" id="A19258" name="Edit home">
+        </div>
       </div>
 
 
@@ -73,7 +63,6 @@
             </div>
 
             <div class="priceNameContainer">
-
               <div class="homeNameContainer">
                 <div>Home name</div>
                 <input type="text" name="homeName" placeholder="Enter your home name here...">
@@ -83,12 +72,7 @@
                 <div>Price(per night)</div>
                 <input type="text" name="Price" placeholder="Enter your home price here...">
               </div>
-
-
             </div>
-
-
-
             <div class="locationRatingContainer">
 
               <div class="locationContainer">
@@ -100,11 +84,7 @@
                 <div>Rating(1-5)</div>
                 <input type="text" name="Rating" placeholder="Enter your home rating here...">
               </div>
-
-
             </div>
-
-
             <div class="phoneNumberContainer">
               <div>Phone number</div>
               <input type="number" name="phoneNumber" placeholder="Enter your phone number here....">
@@ -126,32 +106,9 @@
         </div>
       </div>
 
-
-
-
-
-
-
-
       <%- include("../partials/footer") %>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <script src="/js/edit-home.js"></script>
+        <script src="/js/edit-home.js"></script>
   </body>
 
   </html>

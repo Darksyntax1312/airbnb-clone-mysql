@@ -203,47 +203,24 @@ footer {
   color: #4a5568;
 }
 
-/* Host header  */
-
-/* Show this header on the result page so that the user can navigate */
-
-/* Main page  */
-
-/* .mainPageContainer { */
-/* display: flex; */
-/* justify-content: center; */
-/* align-items: center; */
-/* min-height:100vh; */
-/* padding-top:14vh; */
-/* padding-inline:30px; */
-/* } */
-
 .mainPageContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-
   min-height: 100vh;
   min-height: 100dvh;
-
   padding: 24px 30px;
 }
 
 .commonContainer {
   max-width: 550px;
-
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
-  /* border-radius: 16px;
-  box-shadow:
-    0 10px 25px -5px rgba(0, 0, 0, 0.05),
-    0 8px 10px -6px rgba(0, 0, 0, 0.01); */
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px 40px;
   width: 100%;
-
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
@@ -289,7 +266,7 @@ footer {
 
 .hostLoginButton:hover {
   background-color: #e03150;
-  transform: translateY(-3px); /* Lifts up */
+  transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(255, 56, 92, 0.4);
 }
 
@@ -315,7 +292,7 @@ footer {
 }
 
 .userLoginButton:hover {
-  border-color: #222; /* Turns dark on hover */
+  border-color: #222;
   background-color: #f9f9f9;
   transform: translateY(-3px);
 }
@@ -329,8 +306,6 @@ footer {
   justify-content: end;
   gap: 8px;
 }
-
-/* card containers  */
 
 .homesCardContainer {
   width: 300px;
@@ -365,8 +340,6 @@ footer {
 .homeLocation {
   color: #717171;
   padding-bottom: 14px;
-  /* font-size:16px; */
-  /* word-spacing:1px; */
 }
 
 .priceContainer {
@@ -509,31 +482,19 @@ footer {
   display: none;
 }
 
-/* Overlay editing container is starting from here */
-
 .overlay {
-  /* Job 1: cover the screen */
   position: fixed;
   inset: 0;
-
-  /* Job 2: darken the page */
   background: rgba(0, 0, 0, 0.5);
-
-  /* Job 3: center the modal */
   display: flex;
   align-items: flex-start;
   justify-content: center;
   overflow-y: auto;
-  /* padding-top:10px; */
-
-  /* Job 4: hide by default */
   opacity: 0;
   visibility: hidden;
   transition:
     opacity 0.2s ease,
     visibility 0.2s ease;
-
-  /* Small safety padding so modal doesn't touch edges on tiny screens */
   padding: 16px;
 }
 
@@ -556,7 +517,6 @@ footer {
   flex-direction: row;
   gap: 20px;
   padding-bottom: 20px;
-  /* justify-content:space-between; */
 }
 
 .locationRatingContainer {
@@ -785,19 +745,16 @@ footer {
   background-color: white;
   box-shadow: 0 0 0 4px rgba(43, 53, 209, 0.1);
 }
-
-/* Action row at the bottom of the modal */
 .modalActions {
   display: flex;
-  justify-content: flex-end; /* buttons sit on the right */
+  justify-content: flex-end;
   align-items: center;
   gap: 12px;
   margin-top: 28px;
   padding-top: 20px;
-  border-top: 1px solid #e2e8f0; /* subtle separator from the form */
+  border-top: 1px solid #e2e8f0;
 }
 
-/* Shared button base */
 .modalActions button {
   font-size: 15px;
   font-weight: 600;
@@ -814,15 +771,14 @@ footer {
 }
 
 .modalActions button:active {
-  transform: scale(0.97); /* little press feedback */
+  transform: scale(0.97);
 }
 
 .modalActions button:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(43, 53, 209, 0.25); /* accessible focus ring */
+  box-shadow: 0 0 0 3px rgba(43, 53, 209, 0.25);
 }
 
-/* Cancel — quiet, secondary */
 .btnCancel {
   background-color: #ffffff;
   color: #4a5568;
@@ -834,7 +790,6 @@ footer {
   border-color: #b6bcc6;
 }
 
-/* Save — solid primary, matches your .bookButton */
 .btnSave {
   background-color: #2b35d1;
   color: #ffffff;
@@ -843,7 +798,7 @@ footer {
 }
 
 .btnSave:hover {
-  background-color: #1a218f; /* same hover as .bookButton */
+  background-color: #1a218f;
   border-color: #1a218f;
   box-shadow: 0 6px 16px rgba(43, 53, 209, 0.35);
 }
@@ -971,8 +926,6 @@ footer {
   box-shadow: 0 0 0 4px rgba(43, 53, 209, 0.1);
 }
 
-/* ---------- Favourite button ---------- */
-
 .favForm {
   flex: 1;
   display: flex;
@@ -1028,11 +981,8 @@ footer {
 }
 
 .favHomeCardContainer {
-  /* border:2px solid black; */
   background-color: white;
   margin-top: 10px;
-  /* width: 370px; */
-  /* height: 395px; */
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   overflow: hidden;
@@ -1071,7 +1021,6 @@ footer {
 
 .LocationContainer1 {
   border-bottom: 1px solid rgb(238, 238, 238);
-  /* border-bottom:1px solid black; */
   color: rgb(113, 113, 113);
   font-size: 16.2px;
   padding-bottom: 16px;
@@ -1118,7 +1067,6 @@ footer {
   padding: 10px 15px;
   border-radius: 6px;
   font-weight: 600;
-  /* transition:background-color 0.2s ease-in-out; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1145,11 +1093,7 @@ footer {
 }
 
 .LogoutButton {
-  /* background-color: blue; */
   color: white;
-  /* padding:4px; */
-  /* padding-inline: 8px; */
-  /* padding-block: 4px; */
   padding: 8px 20px;
   background-color: #2b35d1;
   border-radius: 5px;
@@ -1296,7 +1240,6 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid black; */
   padding-top: 40px;
   padding-inline: 30px;
 }
@@ -1329,7 +1272,7 @@ footer {
 }
 
 .seehomeButton {
-  text-decoration:none;
+  text-decoration: none;
   background-color: #ff385c;
   color: white;
   border: none;
@@ -1360,11 +1303,11 @@ footer {
   }
 }
 
-@media(width < 500px){
-  .userhomepageContainer{
-    padding-top:5px;
+@media (width < 500px) {
+  .userhomepageContainer {
+    padding-top: 5px;
   }
-.userhomepagecardContainer{
-margin:45px auto;
-}
+  .userhomepagecardContainer {
+    margin: 45px auto;
+  }
 }

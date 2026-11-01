@@ -26,31 +26,31 @@
                     <div class="cardsContainer">
                         <% favouriteHomes.forEach((newItems)=>{%>
                             <div class="favHomeCardContainer">
-                                <img src="<%=newItems.imageLink%>" alt="<%=newItems.Name%>" width="100%">
+                                <img src="<%=newItems.image_link%>" alt="<%=newItems.Name%>" width="100%">
 
                                 <div class="bottomContainer">
                                     <div class="NameandRatingContainer">
                                         <h2>
-                                            <%= newItems.Name%>
+                                            <%= newItems.name%>
                                         </h2>
                                         <div>
-                                            ⭐<%= newItems.Rating%>
+                                            ⭐<%= newItems.rating%>
                                         </div>
                                     </div>
                                     <div class="LocationContainer1">
-                                        📍 <%= newItems.Location %>
+                                        📍 <%= newItems.location %>
 
                                     </div>
                                     <div class="priceremoveContainer">
                                         <div class="priceContainer1">
 
-                                            <div class="priceRate">Rs<%= newItems.Price %>
+                                            <div class="priceRate">Rs<%= newItems.price %>
                                             </div>
                                             <div class="slash">/</div>
                                             <div class="night">night</div>
 
                                         </div>
-                                        <button class="remove-btn" data-id="<%=newItems.id%>">Remove</button>
+                                        <button class="remove-btn" data-id="<%=newItems.home_id%>">Remove</button>
 
                                     </div>
 

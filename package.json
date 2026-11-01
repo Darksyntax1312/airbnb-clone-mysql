@@ -16,6 +16,7 @@
     "tailwindcss": "^4.3.3"
   },
   "dependencies": {
+    "dotenv": "^18.0.9",
     "ejs": "^7.0.1",
     "express": "^5.2.1",
     "mysql2": "^3.24.6"

@@ -4,6 +4,24 @@ let cancelButton = document.querySelector(".btnCancel");
 let saveButton = document.querySelector(".btnSave");
 let idOfCurrentHome;
 let deleteHomeButton = document.querySelectorAll(".deleteButton");
+
+editButton.forEach((button) =>
+  button.addEventListener("click", async () => {
+    idOfCurrentHome = button.dataset.id;
+    theClass.classList.add("overlay1");
+    let homeId = button.dataset.id;
+    const response = await fetch(`/host/homes-edit/${homeId}`);
+    const home = await response.json();
+    document.querySelector('[name="homeName"]').value = home.name;
+    document.querySelector('[name="Price"]').value = home.price;
+    document.querySelector('[name="Location"]').value = home.location;
+    document.querySelector('[name="Rating"]').value = home.rating;
+    document.querySelector('[name="phoneNumber"]').value = home.phone_number;
+    document.querySelector('[name="Details"]').value = home.details;
+    document.querySelector('[name="imageLink"]').value = home.image_link;
+  }),
+);
+
 deleteHomeButton.forEach((deleteButton) => {
   deleteButton.addEventListener("click", async () => {
     let buttonId = deleteButton.dataset.id;
@@ -12,12 +30,15 @@ deleteHomeButton.forEach((deleteButton) => {
     });
     const data = await requestHandler.json();
     alert(data.message);
-    window.location.reload();
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
+    // window.location.reload();
   });
 });
 
 cancelButton.addEventListener("click", () => {
-  console.log(idOfCurrentHome);
+  // console.log(idOfCurrentHome);
   theClass.classList.remove("overlay1");
 });
 
@@ -34,31 +55,18 @@ saveButton.addEventListener("click", async () => {
       Rating: document.querySelector('[name="Rating"]').value,
       PhoneNumber: document.querySelector('[name="phoneNumber"]').value,
       Details: document.querySelector('[name="Details"]').value,
-      imageLink: document.querySelector("[name=imageLink").value,
+      imageLink: document.querySelector('[name="imageLink"]').value,
     }),
   });
 
   const result = await response.json();
-  console.log(result.message);
-  window.location.reload();
-  theClass.classList.remove("overlay1");
+  if (!response.ok) {
+    alert(result.message);
+    return;
+  }
+  // console.log(result.message);
+  alert(result.message);
+  setTimeout(() => {
+    window.location.reload();
+  }, 100);
 });
-
-editButton.forEach((button) =>
-  button.addEventListener("click", async () => {
-    idOfCurrentHome = button.dataset.id;
-    theClass.classList.add("overlay1");
-    let homeId = button.dataset.id;
-
-    const response = await fetch(`/host/homes-edit/${homeId}`);
-    const home = await response.json();
-
-    document.querySelector('[name="homeName"]').value = home.Name;
-    document.querySelector('[name="Price"]').value = home.Price;
-    document.querySelector('[name="Location"]').value = home.Location;
-    document.querySelector('[name="Rating"]').value = home.Rating;
-    document.querySelector('[name="phoneNumber"]').value = home.PhoneNumber;
-    document.querySelector('[name="Details"]').value = home.details;
-    document.querySelector('[name="imageLink"]').value = home.imageLink;
-  }),
-);

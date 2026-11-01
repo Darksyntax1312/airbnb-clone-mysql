@@ -1,167 +1,177 @@
-/* 1. Basic Reset & Setup */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-  
 
- /* body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f2f5; 
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-}  */
+* {
+  box-sizing: border-box;
+}
 
-/* 2. The Big Card Container */
+body {
+  color: #1a202c;
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f7f7;
+}
+
 .home-card {
-    background-color: white;
-    width: 900px; /* Big width */
-    max-width: 100%; /* Responsive for smaller screens */
-    display: flex; /* Arranges image and details side-by-side */
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    overflow: hidden; /* Keeps image corners rounded */
-    transition: transform 0.3s ease;
-    margin-top:120px;
-    margin-left:300px;
+  background-color: white;
+  width: 900px;
+  max-width: 100%;
+  display: flex;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-top: 90px;
+  margin-inline: auto;
 }
 
-/* Hover effect on the whole card */
 .home-card:hover {
-    transform: translateY(-5px); /* Lifts up slightly */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* 3. Left Side: Image */
 .card-image {
-    width: 45%; /* Takes up 45% of the card width */
+  width: 45%;
 }
 
 .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures image fills the space without stretching */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* 4. Right Side: Details */
 .card-details {
-    width: 55%; /* Takes up 55% of the card width */
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Spreads content out vertically */
+  width: 55%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Header (Name + Rating) */
 .header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 .header-row h2 {
-    font-size: 1.8rem;
-    color: #222;
+  font-size: 1.8rem;
+  color: #222;
 }
 
 .rating {
-    background-color: #fff3cd;
-    color: #856404;
-    padding: 5px 10px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.9rem;
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
-/* Location */
 .location {
-    color: #777;
-    font-size: 1rem;
-    margin-bottom: 15px;
+  color: #777;
+  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
-/* Price */
 .price-tag {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
 }
 
 .price-tag .price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2b35d1; /* Blue matching your previous design */
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2b35d1;
 }
 
-/* Divider Line */
 .divider {
-    border: none;
-    border-top: 1px solid #eee;
-    margin: 15px 0;
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 15px 0;
 }
 
 /* Description */
 .description h3 {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 .description p {
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.5;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
-/* Bottom Row (Phone + Button) */
 .contact-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .phone {
-    font-weight: 600;
-    color: #333;
-    font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
 }
 
 .book-btn {
-    background-color: #2b35d1;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: inherit;
+  background-color: #2b35d1;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
 }
 
 .book-btn:hover {
-    background-color: #1a218f; /* Darker blue on hover */
+  background-color: #1a218f;
 }
 
-/* 5. Responsive Design for Mobile */
-@media (max-width: 768px) {
-    .home-card {
-        flex-direction: column; /* Stacks image on top of details */
-    }
-    
-    .card-image {
-        width: 100%;
-        height: 250px; /* Fixed height for mobile image */
-    }
-    
-    .card-details {
-        width: 100%;
-    }
+.detailshomeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-inline: 30px;
+}
+
+@media (max-width: 921px) {
+  .home-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 300px;
+    display: block;
+  }
+
+  .homesImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .card-details {
+    width: 100%;
+    padding: 20px;
+  }
 }

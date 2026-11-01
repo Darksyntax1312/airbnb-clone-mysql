@@ -15,49 +15,50 @@
 
 <body>
     <%- include("../partials/userNav") %>
-        <div class="home-card">
 
-            <!-- LEFT SIDE: Image -->
-            <div class="card-image">
-                <!-- Using a placeholder image from Unsplash -->
-                <img src="<%=items.imageLink%>" alt="Beautiful Home">
-            </div>
+        <div class="detailshomeContainer">
+                <div class="home-card">
 
-            <!-- RIGHT SIDE: Details -->
-            <div class="card-details">
+                    <div class="card-image">
+                       
+                        <img class="homesImage" src="<%=items.image_link%>" alt="Beautiful Home">
+                    </div>
 
-                <div class="header-row">
-                    <h2>
-                        <%=items.Name %>
-                    </h2>
-                    <div class="rating">⭐ <%=items.Rating%>
+                    <!-- RIGHT SIDE: Details -->
+                    <div class="card-details">
+
+                        <div class="header-row">
+                            <h2>
+                                <%=items.name %>
+                            </h2>
+                            <div class="rating">⭐ <%=items.rating%>
+                            </div>
+                        </div>
+
+                        <p class="location">📍 <%=items.location%>
+                        </p>
+
+                        <div class="price-tag">
+                            <span class="price">Rs<%=items.price%></span> / night
+                        </div>
+
+                        <hr class="divider">
+
+                        <div class="description">
+                            <h3>About this home</h3>
+                            <p>
+                                <%=items.details%>
+                            </p>
+                        </div>
+
+                        <div class="contact-row">
+                            <p class="phone">📞 <%= items.phone_number %></p>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+
                     </div>
                 </div>
-
-                <p class="location">📍 <%=items.Location%>
-                </p>
-
-                <div class="price-tag">
-                    <span class="price">Rs<%=items.Price%></span> / night
-                </div>
-
-                <hr class="divider">
-
-                <div class="description">
-                    <h3>About this home</h3>
-                    <p>
-                        <%=items.details%>
-                    </p>
-                </div>
-
-                <div class="contact-row">
-                    <p class="phone">📞 <%= items.PhoneNumber%>
-                    </p>
-                    <button class="book-btn">Book Now</button>
-                </div>
-
             </div>
-        </div>
 
 </body>
 

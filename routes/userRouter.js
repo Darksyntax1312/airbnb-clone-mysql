@@ -17,9 +17,12 @@ userRouter.get("/User/home-list", userHomeList);
 
 userRouter.get("/User-bookings", userBookings);
 
-// favourite - list
+// favourite - list get request
 
 userRouter.get("/User/User-favourite", userFavouriteget);
+
+// fav list post request
+
 userRouter.post("/User/User-favourite/:homeId", userFavouritepost);
 
 // Favourite - list remove route

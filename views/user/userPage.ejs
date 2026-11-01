@@ -11,31 +11,31 @@
               <% items.forEach((item)=> { %>
                 <div class="homesCardContainer">
                   <div class="topContainer">
-                    <img class="homeImage" src="<%= item.imageLink%>" alt="Home image">
+                    <img class="homeImage" src="<%= item.image_link%>" alt="Home image">
                   </div>
 
                   <div class="bottomContainer">
                     <div class="topItem">
                       <div class="providerName">
-                        <%= item.Name %>
+                        <%= item.name %>
                       </div>
-                      <div class="rating">⭐<%= item.Rating %>
+                      <div class="rating">⭐<%= item.rating %>
                       </div>
                     </div>
                     <div class="homeLocation">
-                      <%= item.Location %>
+                      <%= item.location %>
                     </div>
                     <div class="priceContainer">
-                      <div class="realPrice">Rs<%= item.Price %>
+                      <div class="realPrice">Rs<%= item.price %>
                       </div>
                       <div class="priceBar">/</div>
                       <div class="night">night</div>
                     </div>
 
                     <div class="buttonContainer">
-                      <a href="/User-homes/<%= item.id %>" class="detailsButton">Details</a>
+                      <a href="/User-homes/<%= item.home_id %>" class="detailsButton">Details</a>
                       <a class="bookButton">Book</a>
-                      <form method="post" action="/User/User-favourite/<%= item.id %>" class="favForm">
+                      <form method="post" action="/User/User-favourite/<%= item.home_id %>" class="favForm">
                         <button type="submit" class="favouriteButton">Favourite</button>
                       </form>
                     </div>
